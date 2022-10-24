@@ -1,0 +1,83 @@
+using System;
+//kasyifal ghammi
+
+public class Task1
+{
+
+	//1.control flow
+	static void ControlFlow(){
+	int avgArr = 0;
+	int[] Arr = {6,5,1,7,2,19,7};
+	int sumArr = 0;
+		for(int i = 0;i < Arr.Length;i++){
+			sumArr += Arr[i];
+		}
+		avgArr = sumArr / Arr.Length;
+				  Console.WriteLine(avgArr);
+
+	}
+	//2. Looping
+	static void Looping(){
+		for (int i = 1; i < 20; i++)
+			{
+			  if (i % 2 == 0)
+				{
+				  Console.WriteLine("even");
+				}else{
+				  Console.WriteLine("odd");
+			  }
+			}
+	}
+	//3. methods
+	static void SquareLarge(){
+		string val;
+      	int result;
+
+
+      Console.WriteLine("Input side square: ");
+      val = Console.ReadLine();
+
+      // convert to integer
+      int s = Convert.ToInt32(val);
+		result = s*s;
+		Console.WriteLine(result);
+
+	}
+	//methods
+	static int BlockVolume(){
+		string valTall,valLong,valWide;
+		int result;
+      Console.WriteLine("Input Tall: ");
+      valTall = Console.ReadLine();
+		 Console.WriteLine("Input Long: ");
+      valLong = Console.ReadLine();
+		 Console.WriteLine("Input Wide: ");
+      valWide = Console.ReadLine();
+
+      // convert to integer
+      int valT = Convert.ToInt32(valTall);
+      int valL = Convert.ToInt32(valLong);
+      int valW = Convert.ToInt32(valWide);
+
+		result = valT * valL * valW;
+		return result;
+
+	}
+
+
+	public static void Main(string[] args) {
+		ControlFlow();
+		Console.WriteLine();
+		Console.WriteLine();
+        Looping();
+		Console.WriteLine();
+		Console.WriteLine();
+		SquareLarge();
+		Console.WriteLine();
+		Console.WriteLine();
+		Console.WriteLine("result block volume: " + BlockVolume());
+
+
+
+      }
+}

@@ -19,7 +19,7 @@ func main() {
 
 	kafkaConfig := getKafkaConfig("", "")
 
-	consumers, err := sarama.NewConsumer([]string{"kafka:9092"}, kafkaConfig)
+	consumers, err := sarama.NewConsumer([]string{"kafka:9093"}, kafkaConfig)
 	if err != nil {
 		logrus.Errorf("Error create kakfa consumer got error %v", err)
 	}
